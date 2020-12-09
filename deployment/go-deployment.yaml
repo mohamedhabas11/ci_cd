@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockerized-app-deployment
+  labels:
+    app: dockerized-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dockerized-app
+  template:
+    metadata:
+      labels:
+        app: dockerized-app
+    spec:
+      containers:
+      - name: go
+        image: boxy14/dockerized_app
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "300m"
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+        - name: my-secret
