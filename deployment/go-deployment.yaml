@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: go
-        image: boxy14/dockerized_app
-        imagePullPolicy: IfNotPresent
+        image: boxy14/dockerized_app:v1.00.0-v0.00.1-1
+        imagePullPolicy: Always #IfNotPresent
         resources:
           requests:
             memory: "64Mi"
@@ -26,6 +26,6 @@ spec:
             memory: "128Mi"
             cpu: "300m"
         ports:
-        - containerPort: 80
+        - containerPort: 8081
       imagePullSecrets:
         - name: my-secret

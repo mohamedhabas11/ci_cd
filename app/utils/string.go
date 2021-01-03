@@ -1,10 +1,11 @@
 package utils
 
+// All functions go here
 func getPackageName() string {
 	return "utils"
 }
 
-// Getname returns myname is ...
+// GetMyName returns myname is ...
 func GetMyName() string {
 	return "MohamedHabas"
 }

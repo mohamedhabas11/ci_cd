@@ -22,6 +22,10 @@ func main() {
 		fmt.Fprintf(w, utils.Play())
 	})
 
+	http.HandleFunc("/hostname", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, utils.Hostname())
+	})
+
 	log.Fatal(http.ListenAndServe(":8081", nil))
 
 }

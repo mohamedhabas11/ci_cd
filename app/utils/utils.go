@@ -2,11 +2,12 @@ package utils
 
 import (
 	"math/rand"
+	"os"
 	"strconv"
 	"time"
 )
 
-// bank_heist
+// bank_heist Play
 
 func Play() string {
 	rand.Seed(time.Now().UnixNano())
@@ -24,4 +25,13 @@ func Play() string {
 		result := "Better Luck next time"
 		return result
 	}
+}
+
+// Get Hostname From pods
+func Hostname() string {
+	hostname, error := os.Hostname()
+	if error != nil {
+		panic(error)
+	}
+	return hostname
 }

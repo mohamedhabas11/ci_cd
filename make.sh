@@ -21,3 +21,9 @@ docker tag ${IMAGE_NAME}:${RELEASE} ${DOCKER_REPO}/${IMAGE_NAME}:${RELEASE}
 
 # Push image
 docker push ${DOCKER_REPO}/${IMAGE_NAME}:${RELEASE}
+
+# Pull Image locally 
+#docker pull ${DOCKER_REPO}/${IMAGE_NAME}:${RELEASE}
+
+# The eval command first evaluates the argument and then runs the command stored in the argument.
+#eval $(minikube docker-env)
