@@ -1,3 +1,5 @@
-gitignore
-github_token.sh
+
+/github_token.sh
 secret
+*.sh
+github_token.sh
